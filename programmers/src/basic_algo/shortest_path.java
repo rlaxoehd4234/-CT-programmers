@@ -36,7 +36,10 @@ public class shortest_path {
                 visited[nr][nc] = true; // 아닌 경우에는 방문 표시를 해주고 큐에 add 를 해준다.
                 queue.add(new Point(nr,nc,curr.dist+1));
             }
+
+
         }
+        return -1;
     }
 
     public static void main(String[] args) {

@@ -9,20 +9,20 @@ public class BFS {
 
 
     static void bfs(int node){
-        boolean[] visited = new boolean[MAX_N];
+        boolean[] visited = new boolean[MAX_N]; // 방문한 노드를 체크해야 함.
 
         Queue<Integer> queue = new LinkedList<>();
         visited[node] = true;
         queue.add(node);
 
         while(!queue.isEmpty()){
-            int curr = queue.remove();
-            System.out.println(curr + " ");
+            int curr = queue.remove(); // 방문한 노드를 큐에서 제거하고
+            System.out.println(curr + " "); // 최근 방문한 노드를 출력 함.
 
             for(int next = 0; next < N; ++next){
-                if(!visited[next] && Graph[curr][next] != 0){
+                if(!visited[next] && Graph[curr][next] != 0){ // false 가 아니고 간선이 아니라면 비지트 하고 큐에 추가 해준다.
                     visited[next] = true;
-                    queue.add(next);
+                    queue.add(next); // queue 에 추가해주고 나중에 제거한다.
                 }
             }
         }
