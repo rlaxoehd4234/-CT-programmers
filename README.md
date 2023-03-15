@@ -1,1 +1,3 @@
 # -CT-programmers
+- BFS
+- DFS
